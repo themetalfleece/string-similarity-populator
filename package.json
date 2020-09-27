@@ -6,11 +6,13 @@
     "author": "Jason Athanasoglou <jathanasoglou@outlook.com>",
     "license": "MIT",
     "scripts": {
-        "dev": "nodemon --watch src/**/*.ts --exec ts-node ./src/app.ts",
         "build": "tsc",
-        "start": "node ./dist/src/app.js",
         "lint": "eslint --fix --quiet src/**/*.ts",
-        "format": "prettier --loglevel silent --write src/**/*.ts"
+        "format": "prettier --loglevel silent --write src/**/*.ts",
+        "download": "yarn download-pokemon",
+        "yarn pokemon": "yarn download-pokemon && yarn populate-pokemon",
+        "download-pokemon": "curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/pokedex.ts --create-dirs -o ./raw/pokemon/pokedex.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/abilities.ts --create-dirs -o ./raw/pokemon/abilities.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/items.ts --create-dirs -o ./raw/pokemon/items.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/moves.ts --create-dirs -o ./raw/pokemon/moves.ts",
+        "populate-pokemon": "cp ./src/pokemon/pokedex.d.ts ./raw/pokemon && yarn build && node dist/src/pokemon/pokedex"
     },
     "dependencies": {
         "dotenv": "^8.2.0"
