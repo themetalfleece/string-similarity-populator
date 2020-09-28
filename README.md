@@ -1,3 +1,5 @@
+This is a populator for [string-similarity-data-fetch](https://github.com/themetalfleece/string-similarity-data-fetch)
+
 ## Install
 
 1. Install [node.js](https://nodejs.org/en/download/), [yarn](https://classic.yarnpkg.com/en/docs/install/).
