@@ -8,8 +8,7 @@
         "target": "es2017",
         "outDir": "./dist",
         "baseUrl": "./src",
-        "experimentalDecorators": true,
-        "strict": true
+        "experimentalDecorators": true
     },
     "include": ["src/**/*.ts", "raw/**/*.d.ts"],
     "exclude": ["node_modules"]
