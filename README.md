@@ -6,14 +6,13 @@ This is a populator for [string-similarity-data-fetch](https://github.com/themet
 2. Clone this repository, and using a terminal navigate to its directory.
 3. Run `yarn` to install the dependencies.
 
-## Build & Run
+## Populate Pokemon
 
 1. Copy the contents of the `.env.example` file to a `.env` next to it, and edit it with your values.
-2. Run `yarn build` to build the files.
-3. Run `yarn start` to start the application.
+2. Run `yarn download-pokemon` to download the needed files.
+3. Run `yarn populate-pokemon` to populate the database with the data.
 
--   You can run `yarn dev` to combine the 2 steps above, while listening to changes and restarting automatically.
-    -   You need to run `yarn global add ts-node` once for this to run.
+-   Steps 2 & 3 can be combined by running `yarn pokemon`
 
 ## Linting & Formatting
 
