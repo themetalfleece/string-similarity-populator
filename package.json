@@ -12,7 +12,7 @@
         "download": "yarn download-pokemon",
         "pokemon": "yarn download-pokemon && yarn populate-pokemon",
         "download-pokemon": "curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/pokedex.ts --create-dirs -o ./raw/pokemon/pokedex.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/text/abilities.ts --create-dirs -o ./raw/pokemon/abilitiesText.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/text/items.ts --create-dirs -o ./raw/pokemon/itemsText.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/moves.ts --create-dirs -o ./raw/pokemon/moves.ts && curl https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/text/moves.ts --create-dirs -o ./raw/pokemon/movesText.ts",
-        "populate-pokemon": "yarn build && node ./dist/src/pokemon/pokedex && node ./dist/src/pokemon/abilities && node ./dist/src/pokemon/items"
+        "populate-pokemon": "yarn build && node ./dist/src/pokemon/pokedex && node ./dist/src/pokemon/abilities && node ./dist/src/pokemon/items && node ./dist/src/pokemon/moves"
     },
     "dependencies": {
         "axios": "^0.20.0",
