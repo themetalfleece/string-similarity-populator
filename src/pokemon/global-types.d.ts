@@ -189,6 +189,68 @@ interface MoveData extends EffectData, MoveEventMethods, HitEffect {
     baseMove?: string;
 }
 
+interface Plines {
+    activate?: string;
+    addItem?: string;
+    block?: string;
+    boost?: string;
+    cant?: string;
+    changeAbility?: string;
+    damage?: string;
+    end?: string;
+    heal?: string;
+    move?: string;
+    start?: string;
+    transform?: string;
+}
+
+interface TextObject {
+    desc?: string;
+    shortDesc?: string;
+}
+
+interface ModdedTextObject extends TextObject, Plines {}
+
+interface TextFile extends TextObject {
+    name: string;
+    gen1?: ModdedTextObject;
+    gen2?: ModdedTextObject;
+    gen3?: ModdedTextObject;
+    gen4?: ModdedTextObject;
+    gen5?: ModdedTextObject;
+    gen6?: ModdedTextObject;
+    gen7?: ModdedTextObject;
+}
+
+interface MovePlines extends Plines {
+    alreadyStarted?: string;
+    blockSelf?: string;
+    clearBoost?: string;
+    endFromItem?: string;
+    fail?: string;
+    failSelect?: string;
+    failTooHeavy?: string;
+    failWrongForme?: string;
+    megaNoItem?: string;
+    prepare?: string;
+    removeItem?: string;
+    startFromItem?: string;
+    startFromZEffect?: string;
+    switchOut?: string;
+    takeItem?: string;
+    typeChange?: string;
+    upkeep?: string;
+}
+
+interface MoveText extends TextFile, MovePlines {}
+
+interface ItemText extends TextFile, Plines {}
+
+interface AbilityText extends TextFile, Plines {
+    activateNoTarget?: string;
+    transformEnd?: string;
+}
+
 // set the following as any, as they just affect the battle runtime
 type EffectData = any;
 type HitEffect = any;
